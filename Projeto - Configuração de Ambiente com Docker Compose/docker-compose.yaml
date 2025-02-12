@@ -1,0 +1,75 @@
+version: '3.7'
+
+services:
+  #BANCO DE DADOS
+  mysql:
+    image: mysql:9
+    container_name: zbx_banco
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=zabbix
+      - MYSQL_USER=zabbix
+      - MYSQL_PASSWORD=zabbix
+    networks:
+      - primeira-network
+
+  #SERVER
+  zbx_server:
+    build:
+      context: .
+    container_name: zbx_server
+    environment:
+      DB_SERVER_HOST: zabbix-db
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+    depends_on:
+      - mysql
+    networks:
+      - rede_unica
+    volumes:
+      - ./db:/var/lib/zabbix
+
+  # FRONT
+  zbx_front:
+    image: zabbix-web-apache-mysql:6.0-alpine-latest
+    container_name: zbx_front
+    environment:
+      - DB_SERVER_HOST=127.0.0.1:3306
+      - MYSQL_USER=zabbix
+      - MYSQL_PASSWORD=zabbix
+      - ZBX_SERVER_HOST=127.0.0.1/zabbix
+      - PHP_TZ="America/Sao_Paulo"
+    depends_on:
+      - mysql
+    networks:
+      - rede_unica
+    volumes:
+      - ./db:/var/lib/zabbix
+
+  # PHP
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+    networks:
+      - rede_unica
+
+networks:
+  primeira-network:
+    name: rede_unica
+    external: true
+    driver: bridge
+
+volumes:
+  db:

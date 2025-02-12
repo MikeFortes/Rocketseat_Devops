@@ -1,60 +1,37 @@
-# **Desafio: Implementação de Práticas DevOps em um Ambiente Empresarial Fictício**
+# **Desafio: Configuração de Ambiente com Docker Compose**
 
 ## Introdução
 
-Nesse desafio, você irá simular a implementação de práticas DevOps num ambiente empresarial fictício. Utilizará os conceitos de CALMS e as Três Maneiras do DevOps para identificar oportunidades para aprimorar os processos existentes e propor soluções que cultivem uma cultura de colaboração, automação e aprendizado contínuo.
+Este desafio tem o objetivo de consolidar o conhecimento adquirido sobre Dockerfile, Docker Compose, redes e volumes. Você será desafiado a configurar um ambiente multi-container para uma aplicação de sua escolha. Além disso, é esperado que você explore o uso de variáveis de ambiente para configurar de forma flexível e segura o ambiente.
 
 ## Etapas do Projeto
 
-1. Diagnóstico Cultural (C de CALMS):
-    - Identifique um processo na empresa fictícia que poderia se beneficiar da implementação das práticas DevOps.
-    - Descreva o processo atual, destacando possíveis pontos de atrito entre as equipes e oportunidades de melhoria.
-2. Automação (A de CALMS):
-    - Proponha uma solução de automação para otimizar o processo identificado na etapa anterior.
-    - Elabore um plano para implementar a automação de forma eficiente e minimizar possíveis resistências.
-3. Mensuração e Compartilhamento de Conhecimento (M e S de CALMS):
-    - Estabeleça métricas relevantes para avaliar o impacto da automação na eficiência e qualidade do processo.
-    - Elabore um plano para disseminar o conhecimento acerca das melhorias implementadas e cultivar uma cultura de colaboração e aprendizado.
-4. Três Maneiras:
-    - Primeira Maneira (Acelerar o Fluxo): Identifique oportunidades para simplificar o processo e acelerar a entrega de valor aos clientes.
-    - Segunda Maneira (Ampliar o Feedback): Estabeleça um mecanismo para coletar feedback periodicamente e integrá-lo ao ciclo de desenvolvimento.
-    - Terceira Maneira (Experimentar e Aprender): Incentive uma cultura de experimentação e aprendizado, onde falhas são vistas como oportunidades de melhoria.
+1. Criação do Dockerfile: Desenvolva um arquivo Dockerfile para uma aplicação de sua escolha, utilizando uma imagem base adequada.
+2. Definição do Docker Compose: Configure dois serviços no Docker Compose: o serviço da aplicação e um banco de dados (MySQL, PostgreSQL, MongoDB, etc.).
+3. Configuração de Volumes: Garanta a persistência dos dados do banco de dados configurando volumes apropriados.
+4. Criação de Rede Customizada: Crie uma rede customizada para permitir a comunicação isolada entre os containers.
+5. Utilização de Variáveis de Ambiente: Utilize variáveis de ambiente para configurar diferentes aspectos da aplicação, como URLs do banco de dados, chaves de acesso e outras configurações sensíveis.
+6. Documentação: Documente o processo de configuração em um arquivo README.md, incluindo comandos para executar os containers, configurar as variáveis de ambiente e testar a conexão entre eles.
 
-## Descrição da empresa
+## Instruções Adicionais
 
-A **Tech** é uma empresa fictícia especializada em desenvolvimento de software, que oferece soluções inovadoras para clientes de diversos setores. Sua missão é simplificar a vida das pessoas através da tecnologia.
-
-### Equipe:
-
-- Desenvolvimento: 14 desenvolvedores com experiência em Java, C# e JavaScript. Apenas um profissional tem conhecimento em Delphi, a linguagem do sistema legado.
-- Operações: A equipe de operações, composta por 4 profissionais, enfrenta desafios para manter a infraestrutura de TI e os sistemas em funcionamento eficiente, frequentemente lidando com problemas de escalabilidade e desempenho.
-
-### Projetos em andamento
-
-1. Sistema de Gestão de Vendas (LEGADO): Um aplicativo para gerenciamento de vendas que inclui controle de estoque, emissão de notas fiscais e relatórios de vendas.
-2. Plataforma de E-commerce: uma plataforma de e-commerce escalável para clientes do setor varejista.
-
-### Descrição dos processos atuais da empresa
-
-1. **Entrega de Código:** Após a conclusão do desenvolvimento de um novo recurso, os desenvolvedores preparam um pacote de implantação e o encaminham à equipe de operações.
-2. **Deploy:** O deploy é realizado manualmente no ambiente de produção, sem seguir um procedimento padronizado ou utilizar automação.
-3. **Testes:** A equipe de operações conduz testes manuais no ambiente para verificar a funcionalidade e a integridade do código após o deploy em produção.
-4. **Monitoramento:** Após o deploy, a equipe de operações monitora manualmente o sistema de logs do servidor, para identificar problemas ou falhas que possam surgir.
-
-### Dados de desempenho:
-
-- Tempo médio entre a entrega do código e o deploy: 2 dias.
-- Taxa de sucesso dos deploys manuais: 80%.
-- Número de incidentes após o deploy: média de 2 por semana.
-- Tempo médio de recuperação (MTTR) de incidentes: 4 horas.
+- A aplicação pode ser desenvolvida em qualquer linguagem de programação.
+- Para garantir a segurança, o banco de dados não deve ser configurado apenas com o usuário root. Crie um usuário para a aplicação, concedendo-lhe apenas as permissões necessárias.
+- Para configurar e gerenciar variáveis de ambiente de maneira segura, você pode utilizar ferramentas como scripts Bash, HashiCorp Vault, entre outras soluções de sua preferência.
+- Utilize múltiplos estágios e imagens alpine ao usar o Dockerfile para construir a imagem da aplicação.
+- Evite a inclusão de valores sensíveis ou de distinção de ambientes diretamente no código.
 
 ## Resultados Esperados
 
-Ao final do desafio, terá elaborado um plano abrangente para implementar práticas DevOps num ambiente empresarial fictício. Este plano incluirá sugestões de automação, métricas de avaliação e estratégias para compartilhamento de conhecimento, refletindo uma compreensão prática dos conceitos teóricos apresentados neste módulo. Este desafio te preparará para aplicar esses princípios em ambientes de trabalho reais e cultivar uma cultura de colaboração e inovação.
+- Configuração de um ambiente multi-container funcional com Docker Compose.
+- Utilização efetiva de volumes para persistência de dados.
+- Configuração de variáveis de ambiente para gerenciar configurações sensíveis.
+- Implementação de uma estratégia de segurança para o acesso ao banco de dados, evitando o uso exclusivo do usuário root.
+- Documentação clara e detalhada do processo de configuração no arquivo README.md.
 
 ## Entrega
 
-Após concluir o desafio, você deve enviar a URL do notion (ou outro documento) em que elaborou o plano de implementação.
+Após concluir o desafio, você deve enviar a URL do seu código no GitHub para a plataforma. 
 
 Além disso, que tal fazer um post no LinkedIn compartilhando o seu aprendizado e contando como foi a experiência? É uma excelente forma de demonstrar seus conhecimentos e atrair novas oportunidades!
 
