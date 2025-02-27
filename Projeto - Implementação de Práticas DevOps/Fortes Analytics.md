@@ -41,3 +41,9 @@ A **Fortes Analytics** é uma empresa fictícia especializada em monitoraento de
 - Número de incidentes após o deploy: média de 1 por semana.
 - Tempo médio de recuperação (MTTR) de incidentes: < 1hora
 
+## Contato
+
+- Linkedin: [Michael Fortes](https://www.linkedin.com/in/mikefortes/)
+- Email: mromeiro.f@gmail.com
+
+Project Link: [https://github.com/MikeFortes/Rocketseat_Devops](https://github.com/MikeFortes/Rocketseat_Devops)

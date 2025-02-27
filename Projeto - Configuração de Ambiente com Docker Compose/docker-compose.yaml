@@ -17,23 +17,6 @@ services:
     networks:
       - primeira-network
 
-  #SERVER
-  zbx_server:
-    build:
-      context: .
-    container_name: zbx_server
-    environment:
-      DB_SERVER_HOST: zabbix-db
-      MYSQL_DATABASE: zabbix
-      MYSQL_USER: zabbix
-      MYSQL_PASSWORD: zabbix
-    depends_on:
-      - mysql
-    networks:
-      - rede_unica
-    volumes:
-      - ./db:/var/lib/zabbix
-
   # FRONT
   zbx_front:
     image: zabbix-web-apache-mysql:6.0-alpine-latest
@@ -64,6 +47,23 @@ services:
       - mysql
     networks:
       - rede_unica
+  
+  # SERVER
+  zbx_server:
+    build:
+      context: .
+    container_name: zbx_server
+    environment:
+      DB_SERVER_HOST: zabbix-db
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+    depends_on:
+      - mysql
+    networks:
+      - rede_unica
+    volumes:
+      - ./db:/var/lib/zabbix
 
 networks:
   primeira-network:

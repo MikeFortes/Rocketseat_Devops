@@ -1,5 +1,6 @@
 # Rocketseat_Devops
-Repositório que utilizo para armazenar os projetos criados dentro do curso Devops
+Repositório que utilizo para armazenar os projetos criados dentro do curso "DevOps" da Rocketseat.
+
 
 <!-- CONTACT -->
 ## Contato
