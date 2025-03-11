@@ -25,3 +25,11 @@ Dessa forma, o container esta rodando com o volume persistente mapeando em /usr/
 > docker network create primeira_network
 
 > docker run -d --network primeira-network -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=rocketseat-db -e MYSQL_USER=admin -e MYSQL_PASSWORD=root --name mysql mysql:8
+
+<!-- CONTACT -->
+## Contato
+
+- Linkedin: [Michael Fortes](https://www.linkedin.com/in/mikefortes/)
+- Email: mromeiro.f@gmail.com
+
+Project Link: [https://github.com/MikeFortes/Rocketseat_Devops](https://github.com/MikeFortes/Rocketseat_Devops)
