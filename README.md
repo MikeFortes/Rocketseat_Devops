@@ -1,6 +1,10 @@
 # Rocketseat_Devops
 Repositório que utilizo para armazenar os projetos criados dentro do curso "DevOps" da Rocketseat.
 
+- Modulo: [Docker](https://github.com/MikeFortes/Rocketseat_Devops/tree/main/Atividades/Docker)
+- Modulo: [Terraform](https://github.com/MikeFortes/Rocketseat_Devops/tree/main/Atividades/Terraform)
+
+
 
 <!-- CONTACT -->
 ## Contato
