@@ -9,6 +9,10 @@ No primeiro login de utilização o console do sistema operacional vai tentar ab
 
 Ps. Atenção do nome do perfil, pois ele é usado nos arquivos do terraform, no meu caso foi usado "mikesso"
 
+Proxima vez que for utilizar, lembrar de autenticar usando seu perfil criado durante o aws configure sso
+
+> aws sso login --profile mikesso
+
 
 <!-- CONTACT -->
 ## Contato
