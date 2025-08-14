@@ -1,6 +1,10 @@
 module "s3" {
   source         = "./modules/s3"
   s3_bucket_name = "rocketseat-mike"
+  s3_tags = {
+    Iac = true
+  }
+
 }
 
 module "cloudfront" {
