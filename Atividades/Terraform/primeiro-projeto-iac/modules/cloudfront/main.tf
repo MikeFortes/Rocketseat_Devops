@@ -37,3 +37,4 @@ resource "aws_cloudfront_distribution" "cloudfront" {
   price_class = var.cdn_price_class
   tags = "${var.cdn_tags}"
 }
+

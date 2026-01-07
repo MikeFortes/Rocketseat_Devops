@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "mikesso"
-  region  = "us-east-1"
+  profile = "mike-rocket"
+  region  = "us-east-2"
 }
