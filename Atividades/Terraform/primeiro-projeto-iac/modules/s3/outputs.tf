@@ -9,4 +9,3 @@ output "bucket_id" {
   sensitive   = false
   description = "ID do bucket S3"
 }
-

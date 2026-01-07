@@ -8,4 +8,3 @@ variable "s3_tags" {
   default = {}
   description = "description"
 }
-
